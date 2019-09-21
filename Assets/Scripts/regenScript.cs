@@ -33,6 +33,7 @@ public class regenScript : MonoBehaviour
             if (gooBaby == null) { Debug.Log("No child found"); }
             gooBaby.GetComponent<Rigidbody2D>().AddForce(rigBod.velocity * 100000, ForceMode2D.Impulse);
             */
+            GameObject.Find("Level").GetComponent<AudioScript>().plopHeart();
         }
         else if (other.gameObject.CompareTag("Platforms")) {
              Application.LoadLevel(Application.loadedLevel);

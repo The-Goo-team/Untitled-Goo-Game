@@ -61,3 +61,10 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+Assets/Scenes/New Scene.unity
+Assets/Scenes/New Scene.unity
+*.unity
+Assets/Scenes/New Scene.unity
+Assets/Prefab/intro.prefab
+Assets/Prefab/intro.prefab.meta
+Assets/Prefab/Player.prefab
