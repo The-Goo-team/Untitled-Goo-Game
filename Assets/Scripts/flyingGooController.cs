@@ -15,8 +15,6 @@ public class flyingGooController : MonoBehaviour
 
     public void FlyTo(Vector3 mouse_pos)
     {
-        mouse_pos -= this.transform.position;
-        mouse_pos.Normalize();
         rb.velocity = new Vector3(mouse_pos.x * speed, mouse_pos.y * speed, 0f);
     }
 

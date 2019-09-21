@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 2056323091004445671}
   - component: {fileID: 2056323091004445670}
   - component: {fileID: 8912586086932408443}
+  - component: {fileID: 5643406820127905031}
+  - component: {fileID: 114498806767066848}
+  - component: {fileID: 3331170054001985724}
   m_Layer: 0
   m_Name: heart
   m_TagString: Untagged
@@ -117,3 +120,50 @@ PolygonCollider2D:
       - {x: 0.39999998, y: -0.099999994}
       - {x: 0.42, y: 0}
       - {x: 0.42, y: 0.22}
+--- !u!114 &5643406820127905031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056323091004445675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7885c93ae58e79c4fa75cd7d4696faec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+--- !u!114 &114498806767066848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056323091004445675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9ce5d4a75cc5e545be8a62a09c5fa9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gooBody: {fileID: 7398447627799843680, guid: 83064695db827d74bb49b4d3d1caa51a, type: 3}
+--- !u!50 &3331170054001985724
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056323091004445675}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

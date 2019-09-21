@@ -25,7 +25,6 @@ public class regenScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("npGoo") && !createdBody) {
-            this.gameObject.SetActive(false);
             createdBody = true;
             Instantiate(gooBody, other.gameObject.transform.position, Quaternion.identity);
             /* This code doesn't work, trying to keep the velocity, maybe come backa nd fix later
@@ -33,9 +32,12 @@ public class regenScript : MonoBehaviour
             if (gooBaby == null) { Debug.Log("No child found"); }
             gooBaby.GetComponent<Rigidbody2D>().AddForce(rigBod.velocity * 100000, ForceMode2D.Impulse);
             */
-            GameObject.Find("Level").GetComponent<AudioScript>().plopHeart();
+            //GameObject.Find("Level").GetComponent<AudioScript>().plopHeart();
+
+            Destroy(this.GetComponent<heartController>().original_player_refrence);
+            Destroy(this.gameObject);
         }
-        else if (other.gameObject.CompareTag("Platforms")) {
+        else if (other.gameObject.CompareTag("platform")) {
              Application.LoadLevel(Application.loadedLevel);
         }
     }

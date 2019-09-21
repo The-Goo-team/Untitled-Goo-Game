@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splat: {fileID: 1382616768284939270, guid: f82c2a1ffd0a74b449b6797b68a8ce46, type: 3}
-  speed: 8
+  speed: 16
 --- !u!58 &1842144272605002991
 CircleCollider2D:
   m_ObjectHideFlags: 0
