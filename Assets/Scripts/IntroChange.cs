@@ -18,7 +18,7 @@ public class IntroChange : MonoBehaviour
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) {
-            if(current >= 6) {
+            if(current >= introSprites.Length) {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
             }
             else {
