@@ -33,11 +33,11 @@ public class Crosshair : MonoBehaviour
         
     }
 
-    Vector2 GetMousePositionOnClick(){
+    public Vector2 GetMousePositionOnClick(){
         return Input.mousePosition;
     }
 
-     string GetMouseButtonOnClick(){
+     public string GetMouseButtonOnClick(){
          string button;
         if (Input.GetMouseButtonDown(0))
         {
