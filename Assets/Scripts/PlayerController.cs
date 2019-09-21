@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
         // throw goo
         if (Input.GetMouseButtonDown(0))
         {
+            dropScore();
             Vector3 spawn_pos = this.transform.position;
             Vector3 mouse_pos = Input.mousePosition;
             mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 spawn_pos = this.transform.position;
             Vector3 mouse_pos = Input.mousePosition;
+            //FindObjectsOfTypeAll The mitochondria is the powerhouse of the cell
             mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
 
             
@@ -41,5 +43,12 @@ public class PlayerController : MonoBehaviour
             fly_heart.GetComponent<heartController>().FlyTo(mouse_pos);
             Destroy(heart.gameObject);
         }
+    }
+
+    void dropScore()
+    {
+        GameObject _score = GameObject.Find("Level");
+        Scoring scrip = _score.GetComponent<Scoring>();
+        scrip.livesleft--;
     }
 }

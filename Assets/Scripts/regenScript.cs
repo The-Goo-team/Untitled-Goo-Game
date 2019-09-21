@@ -42,9 +42,5 @@ public class regenScript : MonoBehaviour
         }
     }
 
-    void dropScore() {
-        GameObject _score = GameObject.Find("Level");
-        Scoring scrip = _score.GetComponent<Scoring>();
-        scrip.livesleft--;
-    }
+    
 }
