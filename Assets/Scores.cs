@@ -5,8 +5,9 @@ using UnityEngine;
 public class Scores : MonoBehaviour
 {
     //Holds the max amount of lives for the level
-    public int livesleft;
     private int lives;
+    //Holds the current # of lives: needs to be updated by player
+    public int livesleft;
 
 
     // Start is called before the first frame update
@@ -18,6 +19,8 @@ public class Scores : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if(livesleft < 0) {
+            Application.LoadLevel(Application.loadedLevel);
+        }
     }
 }
