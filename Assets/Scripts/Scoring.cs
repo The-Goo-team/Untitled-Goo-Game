@@ -26,6 +26,6 @@ public class Scoring : MonoBehaviour
 
     public void dropScore() {
         goosLeft--;
-        gbm.UpdateBar(totalGoos, goosLeft);
+      //  gbm.UpdateBar(totalGoos, goosLeft);
     }
 }
