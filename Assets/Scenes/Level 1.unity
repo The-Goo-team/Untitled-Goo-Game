@@ -544,8 +544,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Left click to shoot goo!
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 0}
-  m_sharedMaterial: {fileID: 2140032, guid: dc36b3fdc14f47ebb36fd484a67e268a, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1465,7 +1465,7 @@ PrefabInstance:
     - target: {fileID: 6534352518792638130, guid: defb72ac953d6e34ab5a0430a460fe2e,
         type: 3}
       propertyPath: totalGoos
-      value: 12
+      value: 999
       objectReference: {fileID: 0}
     - target: {fileID: 6534352518792638130, guid: defb72ac953d6e34ab5a0430a460fe2e,
         type: 3}

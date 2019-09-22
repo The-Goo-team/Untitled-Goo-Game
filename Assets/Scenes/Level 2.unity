@@ -752,7 +752,7 @@ PrefabInstance:
     - target: {fileID: 6534352518792638130, guid: defb72ac953d6e34ab5a0430a460fe2e,
         type: 3}
       propertyPath: totalGoos
-      value: 100
+      value: 999
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: defb72ac953d6e34ab5a0430a460fe2e, type: 3}
