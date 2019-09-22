@@ -7,7 +7,7 @@ public class GooBarManager : MonoBehaviour
     public GameObject gooBar;
     public float speed;
 
-    public void UpdateBar() {
+    public void UpdateBar(int total_lives, int lives_left) {
 
     }
 
