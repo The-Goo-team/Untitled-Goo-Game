@@ -9,5 +9,8 @@ public class spikeScript : MonoBehaviour
         if (other.GetComponent<flyingGooController>() != null) {
             Destroy(other.gameObject);
         }
+        else if (other.GetComponent<heartController>() != null) {
+            other.GetComponent<heartController>().ResetPlayer();
+        }
     }
 }

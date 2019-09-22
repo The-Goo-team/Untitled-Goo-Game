@@ -10,14 +10,21 @@ public class PlayerController : MonoBehaviour
     public GameObject trail;
     public GameObject trailRed;
     public Transform launch_site;
+    private Transform heart_parent;
+
+    private void Awake()
+    {
+        // find heart_parent
+        heart_parent = GameObject.Find("HeartParent").transform;
+    }
 
     private void Update()
     {
         // throw goo
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0) && !Input.GetMouseButton(1)) {
             trajectSpawn();
         }
-        if (Input.GetMouseButtonUp(0)) {
+        if (Input.GetMouseButtonUp(0) && !Input.GetMouseButton(1)) {
             GameObject.Find("GameManager").GetComponent<Scoring>().dropScore();
             Vector3 mouse_pos = Input.mousePosition;
             mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
@@ -29,22 +36,25 @@ public class PlayerController : MonoBehaviour
             fly_goo.GetComponent<flyingGooController>().FlyTo(mouse_pos);
         }
         // throw heart
-        if (Input.GetMouseButton(1)) {
+        if (Input.GetMouseButton(1) && !Input.GetMouseButton(0)) {
             trajectSpawnRed();
         }
-        else if (Input.GetMouseButtonUp(1)) {
-            Vector3 mouse_pos = Input.mousePosition;
-            //FindObjectsOfTypeAll The mitochondria is the powerhouse of the cell
-            mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
+        else if (Input.GetMouseButtonUp(1) && !Input.GetMouseButton(0)) {
+            // can only shoot a heart if there are none in teh scene
+            if (heart_parent.transform.childCount <= 0) {
+                Vector3 mouse_pos = Input.mousePosition;
+                //FindObjectsOfTypeAll The mitochondria is the powerhouse of the cell
+                mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
 
 
-            mouse_pos -= this.transform.position;
-            mouse_pos.Normalize();
-            GameObject fly_heart = Instantiate(heart_projectile, launch_site.position, Quaternion.identity);
+                mouse_pos -= this.transform.position;
+                mouse_pos.Normalize();
+                GameObject fly_heart = Instantiate(heart_projectile, launch_site.position, Quaternion.identity, heart_parent);
 
-            fly_heart.GetComponent<heartController>().original_player_refrence = this.gameObject;
-            fly_heart.GetComponent<heartController>().FlyTo(mouse_pos);
-            Destroy(heart.gameObject);
+                fly_heart.GetComponent<heartController>().original_player_refrence = this.gameObject;
+                fly_heart.GetComponent<heartController>().FlyTo(mouse_pos);
+                Destroy(heart.gameObject);
+            }
         }
     }
 

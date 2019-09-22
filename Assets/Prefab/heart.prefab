@@ -135,6 +135,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 24
   original_player_refrence: {fileID: 0}
+  playerPrefab: {fileID: 7398447627799843680, guid: 83064695db827d74bb49b4d3d1caa51a,
+    type: 3}
+  time_untill_despawn: 3
 --- !u!114 &114498806767066848
 MonoBehaviour:
   m_ObjectHideFlags: 0

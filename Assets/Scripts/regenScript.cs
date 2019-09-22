@@ -8,6 +8,7 @@ public class regenScript : MonoBehaviour
     private Rigidbody2D rigBod;
     public GameObject gooBody;
     private bool createdBody;
+    private Transform playerParent;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class regenScript : MonoBehaviour
         //Getting the rigidBody
         rigBod = GetComponent<Rigidbody2D>();
         createdBody = false;
+        playerParent = GameObject.Find("PlayerParent").transform;
     }
 
     // Update is called once per frame
@@ -27,7 +29,7 @@ public class regenScript : MonoBehaviour
         if (other.gameObject.CompareTag("npGoo") && !createdBody) {
             GameObject.Find("GameManager").GetComponent<AudioScript>().plopHeart();
             createdBody = true;
-            Instantiate(gooBody, other.gameObject.transform.position, other.gameObject.transform.rotation);
+            Instantiate(gooBody, other.gameObject.transform.position, other.gameObject.transform.rotation, playerParent);
             /* This code doesn't work, trying to keep the velocity, maybe come backa nd fix later
             GameObject gooBaby = gooBody.transform.Find("heart").gameObject;
             if (gooBaby == null) { Debug.Log("No child found"); }
@@ -37,9 +39,13 @@ public class regenScript : MonoBehaviour
 
             Destroy(this.GetComponent<heartController>().original_player_refrence);
             Destroy(this.gameObject);
+            // destroy all children except for one
+            if (playerParent.childCount > 1) {
+                Destroy(playerParent.GetChild(0).gameObject);
+            }
         }
         else if (other.gameObject.CompareTag("platform")) {
-             Application.LoadLevel(Application.loadedLevel);
+             //Application.LoadLevel(Application.loadedLevel);
         }
     }
 
