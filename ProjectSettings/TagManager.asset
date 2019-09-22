@@ -10,6 +10,8 @@ TagManager:
   - platform
   - End Pipe
   - Trajectory
+  - playButton
+  - MusicSound
   layers:
   - Default
   - TransparentFX

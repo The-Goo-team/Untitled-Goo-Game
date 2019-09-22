@@ -11,9 +11,9 @@ public class MainMenu : MonoBehaviour
     public CursorMode cursorMode = CursorMode.Auto;
     public Vector2 hotspot;
 
-public AudioSource MusicSource;
+    public AudioSource MusicSource;
 
-public AudioSource PlayClick;
+    public AudioSource PlayClick;
 
 
 
