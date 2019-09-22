@@ -12,6 +12,7 @@ public class AudioScript : MonoBehaviour
     void Start()
     {
         gameSound.clip = BlobLandClip;
+        tubeSound();
     }
 
     // Update is called once per frame
