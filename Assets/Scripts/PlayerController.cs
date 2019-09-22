@@ -20,7 +20,7 @@ public class PlayerController : MonoBehaviour
             
             mouse_pos -= this.transform.position;
             mouse_pos.Normalize();
-            spawn_pos += mouse_pos * 2;
+            spawn_pos += mouse_pos;
             GameObject fly_goo = Instantiate(flyingGoo, spawn_pos, Quaternion.identity);
             fly_goo.GetComponent<flyingGooController>().FlyTo(mouse_pos);
         }
@@ -35,8 +35,8 @@ public class PlayerController : MonoBehaviour
             
             mouse_pos -= this.transform.position;
             mouse_pos.Normalize();
-            spawn_pos += mouse_pos * 2;
-            spawn_pos.y += 0.5f;
+            spawn_pos += mouse_pos;
+            spawn_pos.y += 1f;
             GameObject fly_heart = Instantiate(heart_projectile, spawn_pos, Quaternion.identity);
 
             fly_heart.GetComponent<heartController>().original_player_refrence = this.gameObject;

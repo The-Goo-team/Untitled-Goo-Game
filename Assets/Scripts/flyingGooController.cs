@@ -39,6 +39,7 @@ public class flyingGooController : MonoBehaviour
             {
                 rotation = 180f;
             }
+            
             GameObject _splat = Instantiate(splat, this.transform.position, Quaternion.Euler(0f, 0f, rotation));
             Destroy(this.gameObject);
         }
