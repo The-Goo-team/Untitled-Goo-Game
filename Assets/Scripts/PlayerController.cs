@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
             trajectSpawn();
         }
         if (Input.GetMouseButtonUp(0)) {
-            GameObject.Find("Level").GetComponent<Scoring>().dropScore();
+            GameObject.Find("GameManager").GetComponent<Scoring>().dropScore();
             Vector3 mouse_pos = Input.mousePosition;
             mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
 
