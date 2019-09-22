@@ -44,5 +44,17 @@ public class flyingGooController : MonoBehaviour
             GameObject _splat = Instantiate(splat, this.transform.position, Quaternion.Euler(0f, 0f, rotation));
             Destroy(this.gameObject);
         }
+        
+    }
+
+    void Update()
+    {
+        
+        
+        Vector2 dir = rb.velocity;
+        float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward); 
+
+
     }
 }
