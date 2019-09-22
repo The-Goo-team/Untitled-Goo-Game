@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7398447627414371363}
   - component: {fileID: 7398447627414371375}
   - component: {fileID: 7398447627414371361}
-  - component: {fileID: 7398447627414371360}
   - component: {fileID: 4174619767148194885}
   m_Layer: 0
   m_Name: heart
@@ -103,19 +102,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7398447627414371360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398447627414371362}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9ce5d4a75cc5e545be8a62a09c5fa9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gooBody: {fileID: 7398447627799843680}
 --- !u!60 &4174619767148194885
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -170,6 +156,7 @@ GameObject:
   - component: {fileID: 7398447627799843695}
   - component: {fileID: 7398447627799843694}
   - component: {fileID: 7398447627799843681}
+  - component: {fileID: 146460264943427475}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -228,7 +215,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 6
   m_Sprite: {fileID: 21300000, guid: 1ded4e4c2b5cfcb45913fa554d2d9e1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -322,3 +309,20 @@ CapsuleCollider2D:
   m_Offset: {x: 0.00000059384615, y: 0.48154193}
   m_Size: {x: 1.9085069, y: 1.3625599}
   m_Direction: 1
+--- !u!114 &146460264943427475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7398447627799843680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95673043857abf34dbb9864fbd2e3099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flyingGoo: {fileID: 8924543975353656770, guid: 6a9282df53b6fa24891bce8f1a13267e,
+    type: 3}
+  heart_projectile: {fileID: 2056323091004445675, guid: 15449d22a7428e94fa69e045ca018ae8,
+    type: 3}
+  heart: {fileID: 7398447627414371362}
