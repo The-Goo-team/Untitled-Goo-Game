@@ -26,6 +26,9 @@ public class regenScript : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.CompareTag("platform")) {
+            GetComponent<heartController>().isMove = false;
+        }
         if (other.gameObject.CompareTag("npGoo") && !createdBody) {
             GameObject.Find("GameManager").GetComponent<AudioScript>().plopHeart();
             createdBody = true;
