@@ -10,6 +10,13 @@ public class PlayerController : MonoBehaviour
     public GameObject trail;
     public GameObject trailRed;
     public Transform launch_site;
+    private Transform heart_parent;
+
+    private void Awake()
+    {
+        // find heart_parent
+        heart_parent = GameObject.Find("HeartParent").transform;
+    }
 
     private void Update()
     {
@@ -33,18 +40,21 @@ public class PlayerController : MonoBehaviour
             trajectSpawnRed();
         }
         else if (Input.GetMouseButtonUp(1)) {
-            Vector3 mouse_pos = Input.mousePosition;
-            //FindObjectsOfTypeAll The mitochondria is the powerhouse of the cell
-            mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
+            // can only shoot a heart if there are none in teh scene
+            if (heart_parent.transform.childCount <= 0) {
+                Vector3 mouse_pos = Input.mousePosition;
+                //FindObjectsOfTypeAll The mitochondria is the powerhouse of the cell
+                mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
 
 
-            mouse_pos -= this.transform.position;
-            mouse_pos.Normalize();
-            GameObject fly_heart = Instantiate(heart_projectile, launch_site.position, Quaternion.identity);
+                mouse_pos -= this.transform.position;
+                mouse_pos.Normalize();
+                GameObject fly_heart = Instantiate(heart_projectile, launch_site.position, Quaternion.identity, heart_parent);
 
-            fly_heart.GetComponent<heartController>().original_player_refrence = this.gameObject;
-            fly_heart.GetComponent<heartController>().FlyTo(mouse_pos);
-            Destroy(heart.gameObject);
+                fly_heart.GetComponent<heartController>().original_player_refrence = this.gameObject;
+                fly_heart.GetComponent<heartController>().FlyTo(mouse_pos);
+                Destroy(heart.gameObject);
+            }
         }
     }
 
