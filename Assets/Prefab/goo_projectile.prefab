@@ -116,6 +116,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   splat: {fileID: 1382616768284939270, guid: f82c2a1ffd0a74b449b6797b68a8ce46, type: 3}
+  soundSource: {fileID: 6534352518792638141, guid: defb72ac953d6e34ab5a0430a460fe2e,
+    type: 3}
   speed: 16
 --- !u!58 &2956847028543878421
 CircleCollider2D:
@@ -130,6 +132,6 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.51, y: -0.14}
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.34

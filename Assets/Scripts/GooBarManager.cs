@@ -7,7 +7,8 @@ public class GooBarManager : MonoBehaviour
     public GameObject gooBar;
     public float speed;
 
-    private void Awake() {
-        //gooBar.transform.localscale = Vector3 (1f, 1f, 1f);
+    public void UpdateBar(int total_lives, int lives_left) {
+
     }
+
 }

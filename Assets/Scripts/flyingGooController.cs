@@ -20,6 +20,7 @@ public class flyingGooController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        GameObject.Find("Level").GetComponent<AudioScript>().blopLand();
         if (collision.tag == "platform")
         {
             float rotation = 0f;
