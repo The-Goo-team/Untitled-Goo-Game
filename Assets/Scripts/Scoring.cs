@@ -9,6 +9,8 @@ public class Scoring : MonoBehaviour
     //Holds the current # of lives: needs to be updated by player
     [HideInInspector]public int livesleft;
 
+    public GooBarManager gbm;
+
 
     // Start is called before the first frame update
     void Start() {
@@ -20,5 +22,10 @@ public class Scoring : MonoBehaviour
         if (livesleft < 0) {
             Application.LoadLevel(Application.loadedLevel);
         }
+    }
+
+    public void dropScore() {
+        scrip.livesleft--;
+        
     }
 }

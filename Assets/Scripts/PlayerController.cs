@@ -18,7 +18,7 @@ public class PlayerController : MonoBehaviour
             trajectSpawn();
         }
         if (Input.GetMouseButtonUp(0)) {
-            dropScore();
+            GameObject.Find("Level").dropScore();
             Vector3 mouse_pos = Input.mousePosition;
             mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
 
@@ -72,10 +72,5 @@ public class PlayerController : MonoBehaviour
         trajectInst.GetComponent<Rigidbody2D>().velocity = velocity;
     }
 
-    void dropScore()
-    {
-        GameObject _score = GameObject.Find("Level");
-        Scoring scrip = _score.GetComponent<Scoring>();
-        scrip.livesleft--;
-    }
+
 }

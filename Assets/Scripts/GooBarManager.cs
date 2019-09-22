@@ -7,4 +7,8 @@ public class GooBarManager : MonoBehaviour
     public GameObject gooBar;
     public float speed;
 
+    public void UpdateBar() {
+
+    }
+
 }
