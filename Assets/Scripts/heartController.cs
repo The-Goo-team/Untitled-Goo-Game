@@ -7,7 +7,7 @@ public class heartController : MonoBehaviour
     public float speed;
     private Rigidbody2D rb;
     Vector3 target_vector;
-    private bool isMove = true;
+    public bool isMove = true;
     public GameObject original_player_refrence;
     public GameObject playerPrefab;
 
@@ -27,15 +27,16 @@ public class heartController : MonoBehaviour
     }
 
     private void Update() {
-        if (isMove) 
+        if (isMove)
         {
             rb.velocity = new Vector3(target_vector.x * speed, target_vector.y * speed, 0f);
-
-            timer += Time.deltaTime;
-            if (timer >= time_untill_despawn) {
-                ResetPlayer();
-            }
         }
+
+        timer += Time.deltaTime;
+        if (timer >= time_untill_despawn) {
+            ResetPlayer();
+        }
+        
     }
 
     public void ResetPlayer(){
