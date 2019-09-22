@@ -8,6 +8,8 @@ TagManager:
   - npGoo
   - Platforms
   - platform
+  - End Pipe
+  - Trajectory
   layers:
   - Default
   - TransparentFX
