@@ -1032,7 +1032,7 @@ PrefabInstance:
     - target: {fileID: 6534352518792638141, guid: defb72ac953d6e34ab5a0430a460fe2e,
         type: 3}
       propertyPath: m_Name
-      value: Level
+      value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 6534352518792638131, guid: defb72ac953d6e34ab5a0430a460fe2e,
         type: 3}
@@ -1089,6 +1089,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6534352518792638130, guid: defb72ac953d6e34ab5a0430a460fe2e,
+        type: 3}
+      propertyPath: totalGoos
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534352518792638130, guid: defb72ac953d6e34ab5a0430a460fe2e,
+        type: 3}
+      propertyPath: gbm
+      value: 
+      objectReference: {fileID: 1824540037}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: defb72ac953d6e34ab5a0430a460fe2e, type: 3}
 --- !u!1 &1824540035
@@ -1100,6 +1110,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1824540036}
+  - component: {fileID: 1824540037}
   m_Layer: 5
   m_Name: GooBar!
   m_TagString: Untagged
@@ -1128,6 +1139,20 @@ RectTransform:
   m_AnchoredPosition: {x: 310, y: -178}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1824540037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824540035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9423a773b3baa054cb8beed9aee2b010, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gooBar: {fileID: 502702039}
+  speed: 12
 --- !u!1 &1867643715
 GameObject:
   m_ObjectHideFlags: 0
