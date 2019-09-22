@@ -21,10 +21,10 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         // throw goo
-        if (Input.GetMouseButton(0)) {
+        if (Input.GetMouseButton(0) && !Input.GetMouseButton(1)) {
             trajectSpawn();
         }
-        if (Input.GetMouseButtonUp(0)) {
+        if (Input.GetMouseButtonUp(0) && !Input.GetMouseButton(1)) {
             GameObject.Find("GameManager").GetComponent<Scoring>().dropScore();
             Vector3 mouse_pos = Input.mousePosition;
             mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
@@ -36,10 +36,10 @@ public class PlayerController : MonoBehaviour
             fly_goo.GetComponent<flyingGooController>().FlyTo(mouse_pos);
         }
         // throw heart
-        if (Input.GetMouseButton(1)) {
+        if (Input.GetMouseButton(1) && !Input.GetMouseButton(0)) {
             trajectSpawnRed();
         }
-        else if (Input.GetMouseButtonUp(1)) {
+        else if (Input.GetMouseButtonUp(1) && !Input.GetMouseButton(0)) {
             // can only shoot a heart if there are none in teh scene
             if (heart_parent.transform.childCount <= 0) {
                 Vector3 mouse_pos = Input.mousePosition;
