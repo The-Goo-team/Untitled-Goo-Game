@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     public GameObject heart_projectile;
     public GameObject heart;
     public GameObject trail;
+    public GameObject trailRed;
     public Transform launch_site;
 
     private void Update()
@@ -28,7 +29,10 @@ public class PlayerController : MonoBehaviour
             fly_goo.GetComponent<flyingGooController>().FlyTo(mouse_pos);
         }
         // throw heart
-        else if (Input.GetMouseButtonDown(1)) {
+        if (Input.GetMouseButton(1)) {
+            trajectSpawnRed();
+        }
+        else if (Input.GetMouseButtonUp(1)) {
             Vector3 mouse_pos = Input.mousePosition;
             //FindObjectsOfTypeAll The mitochondria is the powerhouse of the cell
             mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
@@ -53,6 +57,18 @@ public class PlayerController : MonoBehaviour
 
         Vector3 velocity = new Vector3(mouse_pos.x * 16 * 8, mouse_pos.y * 16 * 8, 0.0f);
         GameObject trajectInst = Instantiate(trail, launch_site.position, Quaternion.identity);
+        trajectInst.GetComponent<Rigidbody2D>().velocity = velocity;
+    }
+
+    void trajectSpawnRed() {
+        Vector3 mouse_pos = Input.mousePosition;
+        mouse_pos = Camera.main.ScreenToWorldPoint(mouse_pos);
+
+        mouse_pos -= this.transform.position;
+        mouse_pos.Normalize();
+
+        Vector3 velocity = new Vector3(mouse_pos.x * 16 * 8, mouse_pos.y * 16 * 8, 0.0f);
+        GameObject trajectInst = Instantiate(trailRed, launch_site.position, Quaternion.identity);
         trajectInst.GetComponent<Rigidbody2D>().velocity = velocity;
     }
 

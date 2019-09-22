@@ -229,4 +229,6 @@ MonoBehaviour:
     type: 3}
   heart: {fileID: 7398447627414371362}
   trail: {fileID: 6721944417271514986, guid: ef0ba6f98f298aa4fa401634f851f034, type: 3}
+  trailRed: {fileID: 6031645514107394883, guid: 1c0300b0533cc204a9ab611a82802931,
+    type: 3}
   launch_site: {fileID: 5082404711755177400}
