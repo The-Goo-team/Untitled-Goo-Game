@@ -6,9 +6,20 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScenePush : MonoBehaviour
 {
+
+    public AudioSource musicSource;
+
+    public AudioClip LevelTune;
+
     // Start is called before the first frame update
     void Start()
     {
+
+        musicSource = GameObject.Find("MusicSource").GetComponent<AudioSource>();
+
+
+        musicSource.clip = LevelTune;
+        musicSource.Play();
         
     }
 
