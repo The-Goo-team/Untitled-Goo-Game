@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95673043857abf34dbb9864fbd2e3099, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flyingGoo: {fileID: 8924543975353656770, guid: 6a9282df53b6fa24891bce8f1a13267e,
+  flyingGoo: {fileID: 7197552584433592783, guid: eed898a9b5476af41a5cb54f809bd1cb,
     type: 3}
   heart_projectile: {fileID: 2056323091004445675, guid: 15449d22a7428e94fa69e045ca018ae8,
     type: 3}
