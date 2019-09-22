@@ -37,7 +37,7 @@ public class TracerScript : MonoBehaviour
         {
             //Debug.Log(nextOrigin.ToString());// log
             Vector2 nextPosLin   = playerPos+(Dir*i*delta);
-            float nextPosy=Mathf.Sin(((float)i/(float)startValue)* 180.0f * Mathf.Deg2Rad)*nextPosLin.y+playerPos.y;
+            float nextPosy=Mathf.Sin(((float)i/(float)startValue)* 120.0f * Mathf.Deg2Rad)*nextPosLin.y+playerPos.y;
             Vector2 nextPosCurve = new Vector2( nextPosLin.x, nextPosy<0.0f?nextPosy*-1:nextPosy);
             lineRenderer.SetPosition(i,nextPosCurve);
             //Debug.DrawLine(Origin, nextPosCurve,Color.green);
