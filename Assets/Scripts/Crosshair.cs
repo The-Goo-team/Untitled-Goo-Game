@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Crosshair : MonoBehaviour
 {
-//change
-    Vector2 mousePosition;
-    string mouseButtonClicked;
+
+    public Vector2 mousePosition;
+    public string mouseButtonClicked;
 
     // Start is called before the first frame update
     // Initialization
@@ -33,13 +33,11 @@ public class Crosshair : MonoBehaviour
         
     }
 
-    
-
-    public Vector2 GetMousePositionOnClick(){
+    Vector2 GetMousePositionOnClick(){
         return Input.mousePosition;
     }
 
-     public string GetMouseButtonOnClick(){
+     string GetMouseButtonOnClick(){
          string button;
         if (Input.GetMouseButtonDown(0))
         {
