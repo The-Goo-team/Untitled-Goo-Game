@@ -25,6 +25,7 @@ public class regenScript : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("npGoo") && !createdBody) {
+            GameObject.Find("Level").GetComponent<AudioScript>().plopHeart();
             createdBody = true;
             Instantiate(gooBody, other.gameObject.transform.position, other.gameObject.transform.rotation);
             /* This code doesn't work, trying to keep the velocity, maybe come backa nd fix later
