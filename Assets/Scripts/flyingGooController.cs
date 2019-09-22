@@ -15,7 +15,16 @@ public class flyingGooController : MonoBehaviour
 
     public void FlyTo(Vector3 mouse_pos)
     {
+<<<<<<< HEAD
+        mouse_pos -= this.transform.position;
+        mouse_pos.Normalize();
+        
+        rb.velocity = new Vector3(mouse_pos.x * speed, (mouse_pos.y * speed), 0f);
+
+        
+=======
         rb.velocity = new Vector3(mouse_pos.x * speed, mouse_pos.y * speed, 0f);
+>>>>>>> 5dea35d2f700eca78add7f5d8b72a7c1f216f016
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
