@@ -26,6 +26,7 @@ public class heartController : MonoBehaviour
         if (isMove) 
         {
             rb.velocity = new Vector3(target_vector.x * speed, target_vector.y * speed, 0f);
+         
         }
     }
 }
