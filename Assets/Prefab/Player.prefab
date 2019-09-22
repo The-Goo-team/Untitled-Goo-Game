@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7338287633193916988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5082404711755177400}
+  m_Layer: 0
+  m_Name: launch_site
+  m_TagString: Untagged
+  m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5082404711755177400
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7338287633193916988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.03, y: 1.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7398447627799843690}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7398447627414371362
 GameObject:
   m_ObjectHideFlags: 0
@@ -10,7 +40,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7398447627414371363}
   - component: {fileID: 7398447627414371375}
-  - component: {fileID: 4174619767148194885}
   - component: {fileID: 5854424390670944117}
   m_Layer: 0
   m_Name: heart
@@ -81,46 +110,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &4174619767148194885
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7398447627414371362}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 0.4, y: 0.4}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.31471783, y: 0.23868036}
-      - {x: 0.21905641, y: 0.24962401}
-      - {x: 0.11232595, y: 0.24044728}
-      - {x: 0.036242295, y: 0.1771146}
-      - {x: -0.075504735, y: 0.2544744}
-      - {x: -0.25151104, y: 0.25264275}
-      - {x: -0.34056753, y: 0.17679322}
-      - {x: -0.34056753, y: 0.04811287}
-      - {x: -0.31868047, y: -0.0233984}
-      - {x: -0.16754861, y: -0.18264282}
-      - {x: -0.013018798, y: -0.27132332}
-      - {x: 0.08773689, y: -0.28943598}
-      - {x: 0.30641705, y: -0.04264295}
-      - {x: 0.34754878, y: 0.054338455}
-      - {x: 0.35056764, y: 0.17471802}
 --- !u!95 &5854424390670944117
 Animator:
   serializedVersion: 3
@@ -170,6 +159,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7398447627414371363}
+  - {fileID: 5082404711755177400}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -238,3 +228,4 @@ MonoBehaviour:
   heart_projectile: {fileID: 2056323091004445675, guid: 15449d22a7428e94fa69e045ca018ae8,
     type: 3}
   heart: {fileID: 7398447627414371362}
+  launch_site: {fileID: 5082404711755177400}
